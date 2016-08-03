@@ -48,30 +48,30 @@ function dataLoader.loadDenseMatrix(fileName, separator)
   return dict, datasetTensor
 end
 
--- function dataLoader.loadDictionary( fileName )
---   local dict = {}
---   io.input(fileName)
---   local idx = 1
---   for line in io.lines() do
---     table.insert(dict, stringx.strip(line))
---   end
---   io.close()
+function dataLoader.loadDictionary( fileName )
+  local dict = {}
+  io.input(fileName)
+  local idx = 1
+  for line in io.lines() do
+    table.insert(dict, stringx.strip(line))
+  end
+  io.close()
 
---   function  dict:getIndex(string)
---     local index = -1
---     local i = 1
---     while i <= #dict do
---       if (dict[i] == string) then
---         index = i
---         break
---       end
---       i = i + 1
---     end
---     return index
---   end
+  function  dict:getIndex(string)
+    local index = -1
+    local i = 1
+    while i <= #dict do
+      if (dict[i] == string) then
+        index = i
+        break
+      end
+      i = i + 1
+    end
+    return index
+  end
 
---   return dict
--- end
+  return dict
+end
 
 function dataLoader.loadSimpleDataset(fileName, separator)
   local dataset = {}
