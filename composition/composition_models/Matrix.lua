@@ -248,9 +248,6 @@ function Matrix:train()
 		local field_delim = separator or ' '
 		local outputFileName = saveName .. '.pred'
 		local f = io.open(outputFileName, "w")
-		-- print(indexSet:size())
-		-- print(indexSet[1])
-		-- print("predictions", predictions:size())
 
 		for i = 1, predictions:size()[1] do
 			local cidx = indexSet[i][3]

@@ -15,7 +15,7 @@ function FullAdd:__init(inputs, outputs)
 end
 
 function FullAdd:architecture(config)
-	print("# FullAdd; vector a and b are concatenated and composed through the global FullAdd W (size 2nxn);")
+	print("# FullAdd; vector a and b are each multiplied via W1 and W2, two nxn matrices ")
 	print("# inputs " .. self.inputs .. ", outputs " .. self.outputs)
 
 	self.config = config
